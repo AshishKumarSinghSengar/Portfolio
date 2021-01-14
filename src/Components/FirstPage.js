@@ -24,7 +24,7 @@ class First extends Component{
                             <li><a href="#resume"><i className="fa fa-file-o"></i> <span>Resume</span></a></li>
                             <li><a href="#portfolio"><i className="fa fa-bookmark-o"></i> <span>Portfolio</span></a></li>
                             <li><a href="#services"><i className="fa fa-server"></i> <span>Services</span></a></li>
-                            <li><a href="#contact"><i className="fa fa-envelope"></i> <span>Contact</span></a></li>
+                            <li><a href="/footer"><i className="fa fa-envelope"></i> <span>Contact</span></a></li>
                         </ul>
                     </nav>
                 </header>
