@@ -1,22 +1,47 @@
 import React, {Component} from 'react';
 import '../style/navbar.css';
+import '../style/fbg.css';
 
 class First extends Component{
+
+    componentDidMount(){
+        const script = document.createElement("script");
+        script.src = '../external/navbar.js';
+        script.async = true;
+        document.body.appendChild(script);
+    }
+
     render(){
         return(
-            <div className="container">
-                <header id="header" class="d-flex flex-column justify-content-center">
-                    <nav class="nav-menu">
+            <div>
+                <button type="button" className="mobile-nav-toggle d-xl-none"><i className="fa fa-bars"></i></button>
+
+                <header id="header" className="d-flex flex-column justify-content-center">
+                    <nav className="nav-menu">
                         <ul>
-                            <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
-                            <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
-                            <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
-                            <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
-                            <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
-                            <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                            <li className="active"><a href="#hero"><i className="fa fa-home"></i> <span>Home</span></a></li>
+                            <li><a href="#about"><i className="fa fa-user-o"></i> <span>About</span></a></li>
+                            <li><a href="#resume"><i className="fa fa-file-o"></i> <span>Resume</span></a></li>
+                            <li><a href="#portfolio"><i className="fa fa-bookmark-o"></i> <span>Portfolio</span></a></li>
+                            <li><a href="#services"><i className="fa fa-server"></i> <span>Services</span></a></li>
+                            <li><a href="#contact"><i className="fa fa-envelope"></i> <span>Contact</span></a></li>
                         </ul>
                     </nav>
                 </header>
+
+                <section id="hero" class="d-flex flex-column justify-content-center">
+                    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+                        <h1>Ashish Sengar</h1>
+                        <p>I'm <span className="typed" data-typed-items="MERN Stack Developer, Freelancer"></span></p>
+                        <div class="social-links">
+                            <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
+                            <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
+                            <a href="#" className="instagram"><i className="fa fa-instagram"></i></a>
+                            <a href="#" className="google-plus"><i className="fa fa-skype"></i></a>
+                            <a href="#" className="linkedin"><i className="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </section>
             </div>
         );
     }
