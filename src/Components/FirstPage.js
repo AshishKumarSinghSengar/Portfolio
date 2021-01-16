@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import '../style/navbar.css';
 import '../style/fbg.css';
+import Typical from 'react-typical';
 
 class First extends Component{
 
@@ -32,7 +33,19 @@ class First extends Component{
                 <section id="hero" class="d-flex flex-column justify-content-center">
                     <div class="container" data-aos="zoom-in" data-aos-delay="100">
                         <h1>Ashish Sengar</h1>
-                        <p>I'm <span className="typed" data-typed-items="MERN Stack Developer, Freelancer"></span></p>
+                        {/* <p>I'm <span className="typed" data-typed-items="MERN Stack Developer, Freelancer"></span></p> */}
+                        
+                        <p>I'm a {' '} 
+                            <Typical
+                                loop = {Infinity}
+                                wrapper = "b"
+                                steps = {[
+                                    'Developer',2000,
+                                    'Freelancer',2000,
+                                    'MERN Stack Developer',2000
+                                ]}
+                            />
+                        </p>
                         <div class="social-links">
                             <a href="#" className="twitter"><i className="fa fa-twitter"></i></a>
                             <a href="#" className="facebook"><i className="fa fa-facebook"></i></a>
