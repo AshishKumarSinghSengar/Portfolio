@@ -10,7 +10,7 @@ function App() {
   useEffect(()=>{
     setTimeout(()=>{
       setIsLoading(false);
-    },2500);
+    },5000);
   })
 
   return (
@@ -25,3 +25,6 @@ function App() {
 }
 
 export default App;
+/*
+
+*/
